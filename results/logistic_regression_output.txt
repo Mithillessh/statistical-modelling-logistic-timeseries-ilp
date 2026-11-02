@@ -1,0 +1,116 @@
+Shape: (208, 61)
+Missing values: 0
+Duplicate rows: 0
+
+Class counts:
+ Class
+M    111
+R     97
+Name: count, dtype: int64
+
+Class proportion:
+ Class
+M    0.533654
+R    0.466346
+Name: proportion, dtype: float64
+
+Train shape: (145, 12) Test shape: (63, 12)
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  145
+Model:                          Logit   Df Residuals:                      132
+Method:                           MLE   Df Model:                           12
+Date:                Mon, 02 Nov 2026   Pseudo R-squ.:                  0.3552
+Time:                        10:17:42   Log-Likelihood:                -64.631
+converged:                       True   LL-Null:                       -100.23
+Covariance Type:            nonrobust   LLR p-value:                 1.915e-10
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -3.5300      1.229     -2.872      0.004      -5.939      -1.121
+V1            29.8840     17.827      1.676      0.094      -5.056      64.824
+V2             1.4062     11.121      0.126      0.899     -20.391      23.204
+V5             1.1624      5.430      0.214      0.830      -9.480      11.805
+V11            3.8937      3.143      1.239      0.215      -2.267      10.054
+V12            3.8429      2.770      1.388      0.165      -1.585       9.271
+V27            0.3124      1.539      0.203      0.839      -2.705       3.330
+V28            0.4945      1.484      0.333      0.739      -2.414       3.403
+V37           -4.0581      1.193     -3.401      0.001      -6.396      -1.720
+V48           20.1765      5.985      3.371      0.001       8.447      31.906
+V50          -24.6804     21.151     -1.167      0.243     -66.135      16.775
+V52           60.9847     33.109      1.842      0.065      -3.907     125.877
+V60          -30.9937     58.209     -0.532      0.594    -145.081      83.094
+==============================================================================
+
+Test Accuracy: 0.7937
+Test Precision: 0.8182
+Test Recall (Sensitivity, Mouse): 0.7941
+Test Specificity (Raccoon): 0.7931
+Test F1: 0.8060
+Test AUC: 0.8134
+Confusion matrix:
+ [[23  6]
+ [ 7 27]]
+
+Omnibus LR chi-square: 71.19, df=12, p=1.92e-10
+Cox & Snell R^2: 0.388
+Nagelkerke R^2: 0.518
+
+Classification table (train):
+ col_0   0   1
+y            
+0      55  13
+1      15  62
+
+Hosmer-Lemeshow chi-square: 2.911, df=8, p=0.940
+
+Wald test p-values:
+ const    0.004073
+V1       0.093666
+V2       0.899385
+V5       0.830479
+V11      0.215439
+V12      0.165278
+V27      0.839190
+V28      0.738934
+V37      0.000670
+V48      0.000748
+V50      0.243263
+V52      0.065482
+V60      0.594411
+dtype: float64
+
+Odds ratios (per 1-unit):
+ const    2.930454e-02
+V1       9.516444e+12
+V2       4.080320e+00
+V5       3.197727e+00
+V11      4.908981e+01
+V12      4.665990e+01
+V27      1.366685e+00
+V28      1.639736e+00
+V37      1.728203e-02
+V48      5.788456e+08
+V50      1.911854e-11
+V52      3.057232e+26
+V60      3.464143e-14
+dtype: float64
+
+Odds ratios (per +0.01):
+ const    0.965316
+V1       1.348294
+V2       1.014161
+V5       1.011692
+V11      1.039704
+V12      1.039177
+V27      1.003129
+V28      1.004958
+V37      0.960231
+V48      1.223561
+V50      0.781294
+V52      1.840150
+V60      0.733493
+dtype: float64
+
+New animal - predicted P(Mouse): 0.1141
+Predicted class: Raccoon (R)

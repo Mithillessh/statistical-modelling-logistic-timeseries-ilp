@@ -1,0 +1,8 @@
+numpy<2.3
+pandas<2.3
+scipy<1.15
+scikit-learn
+statsmodels>=0.14,<0.15
+matplotlib
+seaborn
+pulp>=2.7,<3

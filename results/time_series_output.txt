@@ -1,0 +1,90 @@
+Length: 24000
+count    24000.000000
+mean      5877.983217
+std       4525.401235
+min        110.000000
+25%       2182.160021
+50%       4570.500000
+75%       9040.126750
+max      46597.540000
+Name: V4, dtype: float64
+Skewness: 1.3532416093881898
+Excess kurtosis: 3.1377748374193457
+
+Row-wise coefficient of variation (median): 0.050263495872314067
+
+Block means (every 1000 obs):
+ 0     5824.510805
+1     5672.948751
+2     6685.346099
+3     6885.777351
+4     7006.533876
+5     5628.653630
+6     5558.964831
+7     5302.825054
+8     6685.580665
+9     6680.353498
+10    6024.127171
+11    5043.036035
+12    5665.415672
+13    4811.685156
+14    6583.317136
+15    5445.970304
+16    6270.665900
+17    5349.818042
+18    5522.198792
+19    4874.016447
+20    6148.130446
+21    5866.266488
+22    6293.505440
+23    5241.949618
+Name: V4, dtype: float64
+
+ADF statistic: -15.5476, p-value: 2.12e-28, lags used: 47
+
+ACF lags 1-12: [0.1732 0.1396 0.1273 0.0994 0.0948 0.0972 0.1031 0.0852 0.0723 0.0863
+ 0.0819 0.0737]
+PACF lags 1-12: [0.1732 0.113  0.0901 0.0544 0.0509 0.0531 0.0572 0.0339 0.0216 0.04
+ 0.0335 0.0239]
+
+Seasonal component range: -345.94181198832075 520.5113091152147
+
+Train length: 23980 Test length: 20
+/tmp/claude-0/-home-claude/3dfae66e-1441-5b44-b1f3-b080728f707d/scratchpad/v/lib/python3.13/site-packages/statsmodels/tsa/holtwinters/model.py:918: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+
+SES smoothing level (alpha): 0.06255813953488372
+
+--- Out-of-sample forecast accuracy (test set, n=20) ---
+Naive         MAE=  3177.47  RMSE=  4754.25  MAPE=  71.21%
+Mean          MAE=  3648.92  RMSE=  3938.00  MAPE= 208.99%
+SMA(3)        MAE=  3126.74  RMSE=  4697.19  MAPE=  72.11%
+SES           MAE=  3082.02  RMSE=  3774.81  MAPE= 152.98%
+AR(1)         MAE=  3676.91  RMSE=  3988.25  MAPE= 208.61%
+ARMA(1,1)     MAE=  3239.16  RMSE=  3808.48  MAPE= 163.83%
+ARMA(2,1)     MAE=  3263.52  RMSE=  3812.18  MAPE= 168.48%
+ARMA(2,2)     MAE=  3330.81  RMSE=  3844.54  MAPE= 172.51%
+
+--- In-sample AIC/BIC and Ljung-Box test ---
+AR(1)        AIC=471031.55 BIC=471055.80 Ljung-Box(10) p=0.0000
+ARMA(1,1)    AIC=470116.99 BIC=470149.33 Ljung-Box(10) p=0.0000
+ARMA(2,1)    AIC=470065.20 BIC=470105.62 Ljung-Box(10) p=0.0001
+ARMA(2,2)    AIC=470021.41 BIC=470069.92 Ljung-Box(10) p=0.0088
+/tmp/claude-0/-home-claude/3dfae66e-1441-5b44-b1f3-b080728f707d/scratchpad/v/lib/python3.13/site-packages/statsmodels/tsa/holtwinters/model.py:918: ConvergenceWarning: Optimization failed to converge. Check mle_retvals.
+  warnings.warn(
+
+Final SES alpha: 0.06255813953488372
+
+SES 4-quarter forecast:
+ 24001    4680.322831
+24002    4680.322831
+24003    4680.322831
+24004    4680.322831
+dtype: float64
+
+ARMA(2,2) 4-quarter forecast (reference):
+ 24001    5128.344138
+24002    5161.034606
+24003    5187.835744
+24004    5210.002414
+Name: predicted_mean, dtype: float64

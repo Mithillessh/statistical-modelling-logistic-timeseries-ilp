@@ -1,0 +1,6 @@
+Status: Optimal
+Tables: 4.0
+Chairs: 9.0
+Profit: 96.0
+Wood used: 300.0
+Labour used: 110.0
